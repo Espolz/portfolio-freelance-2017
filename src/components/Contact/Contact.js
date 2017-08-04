@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FlexContainer, Mail, Header, HeaderText, Form, Send, sendAnimSpeed} from './Contact.style';
 
-
 export default class Contact extends Component {
 	constructor(props) {
 		super(props);
@@ -30,7 +29,7 @@ export default class Contact extends Component {
 							<HeaderText>CONTACTEZ-MOI !</HeaderText>
 						</Header>
 						<Form>
-						</Form>	
+						</Form>
 						<Send onClick={this.sendMail}>Envoyer</Send>
 					</Mail>
 				</FlexContainer>

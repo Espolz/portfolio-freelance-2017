@@ -9,4 +9,5 @@ export const Title = styled.h3`
 
 export const ProjectGrid = styled(Row)`
 	margin-top: 40px;
+	padding: 0 20px;
 `;
