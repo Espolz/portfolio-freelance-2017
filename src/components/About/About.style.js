@@ -1,25 +1,35 @@
 import styled from 'styled-components';
+import colors from '../../theme/colors';
+import { media } from '../../theme/media';
 
-const titleToContentGap = '40px';
-const subTitleRadius = '10px';
-
-
-export const Title = styled.h3`
-	text-align: center;
-	font-weight: bold;
-	font-size: 2.75em;
-`;
+const titleToContentGap = '5rem';
 
 export const Presentation = styled.p`
 	text-align: justify;
-	line-height: 1.5em;
-	font-size: 1.7em;
+	line-height: 4.5rem;
+	font-size: 3rem;
 	width: 80%;
 	margin: ${titleToContentGap} auto 0;
+	font-family: Helvetica, Arial, sans-serif;
+	
+	${media.phone`
+		font-size: 2rem;
+		line-height: 3rem;
+	`}
+
+	a, a:hover, a:active, a:focus {
+		color: ${colors.lighterpurple};
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
 `;
 
 export const Article = styled.article`
-	margin-bottom: 100px;
+	margin-bottom: ${titleToContentGap};
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -38,15 +48,15 @@ export const Skills = styled.div`
 
 export const SubTitle = styled.h4`
 	text-align: center;
-	width: 8em;
 	margin: 0 auto;
-	font-style: italic;
-	font-size: 2.5em;
+	font-weight: bold;
+	font-size: 5rem;
 	margin-top: ${titleToContentGap};
 	margin-bottom: ${titleToContentGap};
-	/*border 4px solid #333333;
-	border-bottom-right-radius: ${subTitleRadius};
-	border-bottom-left-radius: ${subTitleRadius};*/
+
+	${media.phone`
+		font-size: 3rem;
+	`}
 `;
 
 

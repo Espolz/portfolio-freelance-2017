@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FlexContainer, Name, Brief, Techno, Img, FakeImg, Overlay, Link } from './ProjectCard.style';
+import { FlexContainer, Name, Brief, Techno, Img, FakeImg, Overlay, Link, Description } from './ProjectCard.style';
 
 
 const ProjectCard = ({name, brief, techno, link, imgSrc}) => (
@@ -10,9 +10,11 @@ const ProjectCard = ({name, brief, techno, link, imgSrc}) => (
 				<Img src={imgSrc} alt={name}/>
 				<Overlay><i className="fa fa-external-link" aria-hidden="true"></i></Overlay>
 			</FakeImg>
-			<Name>{name}</Name>
-			<Brief>{brief}</Brief>
-			<Techno>{techno.join(' / ')}</Techno>
+			<Description>
+				<Name>{name}</Name>
+				<Brief>{brief}</Brief>
+				<Techno>{techno.join(' / ')}</Techno>
+			</Description>
 		</FlexContainer>
 	</Link>
 );

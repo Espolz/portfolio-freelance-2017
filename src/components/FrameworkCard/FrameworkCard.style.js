@@ -33,6 +33,7 @@ export const StyledImg = styled.img`
 export const Label = styled.p`
 	font-size: 2em;
 	text-align: center;
+	font-weight: bold;
 
 	${media.phone`
 		font-size: 1.8em;

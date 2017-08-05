@@ -18,9 +18,8 @@ export default class Footer extends Component {
 				<Socials>
 					{socials.map((social, idx) => {
 						return (
-							
-								<SocialItem key={idx} background={social.background} name={social.name} faLogoClass={social.faLogoClass} link={social.link}/>
-															);		
+							<SocialItem key={idx} background={social.background} name={social.name} faLogoClass={social.faLogoClass} link={social.link}/>
+						);		
 					})}
 				</Socials>
 					

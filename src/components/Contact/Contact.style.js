@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import colors from '../../theme/colors';
 
 export const sendAnimSpeed = 1500;
 
@@ -51,17 +52,17 @@ export const Mail = styled.div`
 	display: flex;
 	height: ${mailHeight};
 	width: ${mailWidth};
-	background: lightblue;
+	background: ${colors.purple};
 	box-shadow: 0 20px 10px -5px rgba(0,0,0,0.2);
 	padding: 5px;
-	color: lightblue;
+	color: ${colors.purple};
 	${props => props.send && `animation: ${launchAnim} ${sendAnimSpeed}ms ease-in-out;`}
 `;
 
 export const Header = styled.div`
 	width: 100%;
 	height: 100px;
-	background-color: white;
+	background-color: ${colors.white};
 	text-align: center;
 `;
 
@@ -80,12 +81,16 @@ export const Send = styled.div`
 	border-radius: 50%;
 	width: ${sendBtnSize};
 	line-height: ${sendBtnSize};
-	background-color: white;
-	transition: transform 300ms ease-in-out;
+	background-color: ${colors.yellow};
+	color: ${colors.purple};
+	transition: all 300ms ease-in-out;
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
 	cursor: pointer;
+	font-weight: bold;
 
 	&:hover {
 		transform: scale(1.1, 1.1);
+		background-color: ${colors.pink};
+		color: ${colors.yellow};
 	}
 `;

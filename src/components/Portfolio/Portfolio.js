@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { ProjectGrid, Title } from './Portfolio.style.js';
+import { ProjectGrid } from './Portfolio.style.js';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
 import { Col } from 'react-bootstrap';
+import { Title } from '../../theme/globalStyle';
+
 
 export default class Portfolio extends Component {
 	render() {
 		return (
 			<section>
-				<Title>Mes Projets</Title>
+				<Title>MES PROJETS</Title>
 				<ProjectGrid>
 					{
 						projects.map((project, idx) => (

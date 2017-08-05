@@ -17,6 +17,7 @@ export const SkillTag = styled.div`
 	background-color: ${props => props.color};
 	box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.15);
 	color: white;
+	font-weight: bold;
 `;
  
 export const ProgressBar = styled.div`

@@ -1,6 +1,6 @@
 import UIAnimations from '../assets/techniques_img/UIAnimations.png';
 import responsiveWebDesign from '../assets/techniques_img/responsiveWebDesign.jpg';
-import webAPI from '../assets/techniques_img/webAPI.jpg';
+import webAPI from '../assets/techniques_img/webAPI.svg';
 
 export const languages = [
 	{

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { Title, Presentation, Article, Skills, SubTitle, Categorie} from './About.style';
+import { Title } from '../../theme/globalStyle';
+import { Presentation, Article, Skills, SubTitle, Categorie} from './About.style';
 import { languages, frameworks, techniques } from '../../data/skills';
 import SkillIndicator from '../SkillIndicator/SkillIndicator';
 import FrameworkCard from '../FrameworkCard/FrameworkCard';
@@ -11,7 +12,7 @@ export default class About extends Component {
 		return (
 			<section>
 				<Article>
-						<Title>Qui suis-je ?</Title>
+						<Title>QUI SUIS-JE ?</Title>
 						<Presentation>
 							Luc est développeur web front-end indépendant.
 							 Il a récemment obtenu la certification front-end du
@@ -22,10 +23,10 @@ export default class About extends Component {
 				</Article>
 				<Article>
 
-						<Title>Mes compétences</Title>
+						<Title>MES COMPÉTENCES</Title>
 
 						<Categorie>
-							<SubTitle>Langages</SubTitle>
+							<SubTitle>LANGAGES</SubTitle>
 							<Skills>
 							{languages.map((skill, idx) => {
 								return (
@@ -38,7 +39,7 @@ export default class About extends Component {
 						</Categorie>
 
 						<Categorie>
-							<SubTitle>Frameworks</SubTitle>
+							<SubTitle>FRAMEWORKS</SubTitle>
 							<Row style={{ marginTop: '40px'}}>
 								{frameworks.map((framework, idx) => {
 									return (
@@ -51,7 +52,7 @@ export default class About extends Component {
 						</Categorie>
 
 						<Categorie>
-							<SubTitle>Techniques</SubTitle>
+							<SubTitle>TECHNIQUES</SubTitle>
 								{techniques.map((technique, idx) => {
 									return (
 										<TechniqueCard key={idx} name={technique.name} imgSrc={technique.imgSrc}/>	

@@ -1,19 +1,58 @@
 import React, { Component } from 'react';
-import { activeStyle, BurgerMenu, UL, LI, StyledNavLink } from './Header.style';
+import { StyledNav, activeStyle, BurgerMenu, UL, LI, StyledNavLink } from './Header.style';
 
 export default class Header extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isCollapsed: true
+		};
+	}
+
+	handleClick = (event) => {
+		let button = document.querySelector('button');
+		if (button.classList.contains('collapsed')) {
+			this.setState({
+				isCollapsed: true
+			});
+		} else {
+			this.setState({
+				isCollapsed: false
+			});
+		}
+	}
+
+	collapse = (event) => {
+		this.setState({
+			isCollapsed: true
+		});
+
+		let button = document.querySelector('button');
+		let navbar = document.querySelector('#myNavbar');
+
+		if (!button.classList.contains('collapsed')) {
+			button.classList.add("collapsed");
+		}
+
+		if (navbar.classList.contains('in')) {
+			navbar.classList.remove('in');
+		}
+
+	}
+
+
 	render() {
 		return (
 			<header>
-			  <nav className="navbar">	
+			  <StyledNav className="navbar navbar-fixed-top" isCollapsed={this.state.isCollapsed}>	
 				  <div className="container-fluid">
 				    <div className="navbar-header">
-				      <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				        <BurgerMenu className="fa fa-bars" aria-hidden="true"></BurgerMenu>
+				      <button onClick={this.handleClick} type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				      	<BurgerMenu className="fa fa-bars" aria-hidden="true"></BurgerMenu>
 				      </button>
 				    </div>
 				    <div className="collapse navbar-collapse" id="myNavbar">
-				      <UL className="nav navbar-nav">
+				      <UL onClick={this.collapse} className="nav navbar-nav">
 				        <LI>
 				        	<StyledNavLink exact activeStyle={activeStyle} to='/'>ACCUEIL</StyledNavLink>
 				        </LI>
@@ -24,12 +63,12 @@ export default class Header extends Component {
 				        	<StyledNavLink activeStyle={activeStyle} to='/portfolio'>PORTFOLIO</StyledNavLink>
 				        </LI>
 				        <LI>
-				        	<StyledNavLink activeStyle={activeStyle} to='/contact'>CONTACT</StyledNavLink>
+				        	<StyledNavLink id='contact' activeStyle={activeStyle} to='/contact'>CONTACT</StyledNavLink>
 				        </LI>
 				      </UL>
 				    </div>
 				  </div>
-				</nav>
+				</StyledNav>
 			</header>
 		);
 	}

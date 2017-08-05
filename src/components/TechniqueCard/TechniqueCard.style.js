@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import colors from '../../theme/colors';
+
 
 const imgWidth = '500px';
 const imgHeight = '200px';
@@ -37,16 +39,18 @@ export const Overlay = styled.div`
 
 
 export const Label = styled.p`
-	margin: 0;
-	color: white;
-	font-size: 1.5em;
+	margin: 0;	
+	color: ${colors.yellow};
+	font-size: 2.5rem;
+	font-family: Oswald, sans-serif;
 	font-weight: bold;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 5px solid white;
+	border: 5px solid ${colors.blue};
 	text-align: center;
+	background-color: ${colors.pink};
 	padding: 0.5em;
 	box-shadow: 2px 5px 5px -2px rgba(0, 0, 0, 0.5);
 	text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Grid } from 'react-bootstrap';
+import ReallySmoothScroll from 'really-smooth-scroll';
 
+import { StyledGrid } from './App.style';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Home from '../../components/Home/Home';
@@ -9,14 +10,21 @@ import NotFound from '../../components/NotFound/NotFound';
 import About from '../../components/About/About';
 import Contact from '../../components/Contact/Contact';
 import Portfolio from '../../components/Portfolio/Portfolio';
+import ScrollTop from '../../components/ScrollTop/ScrollTop';
 
-export default class App extends Component {
+
+//smooth scroll
+ReallySmoothScroll.shim();
+
+
+class App extends Component {
   render() {
     return (
       <Router>
           <div>
             <Header />
-            <Grid fluid style={{ padding: 0 }}>
+            <ScrollTop />
+            <StyledGrid fluid>
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/about' component={About} />
@@ -24,10 +32,13 @@ export default class App extends Component {
                 <Route path='/contact' component={Contact} />
                 <Route render={NotFound} />
               </Switch>
-            </Grid>
+            </StyledGrid> 
             <Footer />
           </div>
       </Router> 
     );
   }
 }
+
+
+export default App;

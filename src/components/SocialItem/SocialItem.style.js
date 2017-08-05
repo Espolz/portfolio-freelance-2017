@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import colors from '../../theme/colors';
 
-const fontColor = 'white';
+const fontColor = colors.white;
 
 export const Link = styled.a`
 	&, &:hover, &:active, &:focus {
@@ -12,11 +13,11 @@ export const Link = styled.a`
 export const Icon = styled.i`
 	text-align: center;
 	font-size: 5rem;
-	transition: all 300ms ease-in-out;
+	transition: all 100ms ease-in-out;
 
 	&:hover {
 		transform: translateY(-10%) scale(1.2);
 		text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-		color: ${props => props.color};
+		color: ${colors.yellow};
 	}
 `;
