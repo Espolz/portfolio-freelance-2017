@@ -14,8 +14,9 @@ export default class About extends Component {
 				<Article>
 						<Title>QUI SUIS-JE ?</Title>
 						<Presentation>
-							Luc est développeur web front-end indépendant.
-							 Il a récemment obtenu la certification front-end du
+							Luc est développeur web front-end en indépendant.
+							 Passionné par le développement et la création, 
+							 il a récemment obtenu la certification front-end du
 							 <span> <a href='https://www.freecodecamp.com/about/' target='_blank' rel="noopener noreferrer">freeCodeCamp</a> </span>
 							 et il continue désormais son apprentissage du Web côté serveur
 							 avec Node.js et MongoDB.

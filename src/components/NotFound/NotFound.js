@@ -4,7 +4,7 @@ import { InformationsDiv, RedirectionLink, H3 } from './NotFound.style';
 
 export default function() {
 		return (
-			<section>
+			<section style={{ padding: '1rem' }}>
 				<Row>
 					<Col xs={12}>
 						<InformationsDiv>
@@ -13,6 +13,7 @@ export default function() {
 						</InformationsDiv>
 					</Col>
 				</Row>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			</section>
 		);
 }

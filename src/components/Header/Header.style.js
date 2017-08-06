@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { media } from '../../theme/media';
 import colors from '../../theme/colors';
@@ -46,33 +46,37 @@ export const LI = styled.li`
 	`}
 `;
 
-export const StyledNavLink = styled(NavLink)`
+
+const linkCSS = css`
 	&, &:hover, &:active, &:focus {
 		color: ${colors.yellow};
 		text-decoration: none;
 		background-color: inherit !important;
 	}
-
 	transition: all 200ms ease-in-out;
-
-	&#contact {
-		border: 3px solid ${colors.yellow};
-
-		&:hover {
-			border-color: ${colors.pink};
-			background-color: ${colors.yellow} !important;
-		}
-	}
 
 	&:hover {
 		color: ${colors.pink};
 	}
+`;
+
+export const StyledNavLink = styled(NavLink)`
+	${linkCSS}
+`;
+
+export const Link = styled.a`
+	${linkCSS}
+
+	border: 3px solid ${colors.yellow};
+
+	&:hover {
+		border-color: ${colors.pink};
+		background-color: ${colors.yellow} !important;
+	}
 
 	${media.phone`
-		&#contact {
-			width: 10rem;
-			margin: 1rem auto;
-		}
+		width: 10rem;
+		margin: 1rem auto;
 	`}
 `;
 

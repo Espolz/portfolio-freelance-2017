@@ -5,6 +5,7 @@ const colors = {
 	pink: '#DD25B0',
 	blue: '#00F4D9',
 	grey: '#706f6f',
+	lightgrey: 'lightgrey',
 	lightergrey: '#ECEFF1',
 	white: '#fff',
 	transparent: 'rgba(0,0,0,0)'

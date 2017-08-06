@@ -8,7 +8,7 @@ const ProjectCard = ({name, brief, techno, link, imgSrc}) => (
 		<FlexContainer>
 			<FakeImg src={imgSrc}>
 				<Img src={imgSrc} alt={name}/>
-				<Overlay><i className="fa fa-external-link" aria-hidden="true"></i></Overlay>
+				<Overlay id="overlay"><i className="fa fa-external-link" aria-hidden="true"></i></Overlay>
 			</FakeImg>
 			<Description>
 				<Name>{name}</Name>

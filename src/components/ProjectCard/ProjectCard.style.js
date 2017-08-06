@@ -24,11 +24,12 @@ export const FlexContainer = styled.div`
 	background-color: ${colors.lightergrey};
 	border-bottom: 5px solid ${colors.yellow};
 
+
 	&:hover {
 		box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
 		opacity: 0.8;
 
-		> div > p {
+		#overlay {
 			opacity: 1;
 		}
 	}
@@ -68,13 +69,16 @@ export const Overlay = styled.p`
 
 
 export const Description = styled.div`
-	height: 17rem;
+	height: 20.75rem;
+	padding: 0 5px;
 `;
 
 
 export const Name = styled.h4`
 	font-weight: bold;
-	font-size: 3rem;
+	font-size: 2rem;
+	padding-top: 1rem;
+	line-height: 3rem;
 `;
 
 export const Brief = styled.p`
@@ -85,4 +89,5 @@ export const Brief = styled.p`
 export const Techno = styled.p`
 	font-style: italic;
 	color: ${colors.grey};
+	padding: 0 5px;	
 `;

@@ -8,7 +8,6 @@ import Footer from '../../components/Footer/Footer';
 import Home from '../../components/Home/Home';
 import NotFound from '../../components/NotFound/NotFound';
 import About from '../../components/About/About';
-import Contact from '../../components/Contact/Contact';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import ScrollTop from '../../components/ScrollTop/ScrollTop';
 
@@ -29,7 +28,6 @@ class App extends Component {
                 <Route exact path='/' component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/portfolio' component={Portfolio} />
-                <Route path='/contact' component={Contact} />
                 <Route render={NotFound} />
               </Switch>
             </StyledGrid> 

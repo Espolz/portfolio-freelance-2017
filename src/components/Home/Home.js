@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyledSection, Name, Line, HashtagList, HashtagItem, ValueProposition, CTAButton, CTADiv } from './Home.style';
 import { Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
+import { StyledSection, Name, Line, HashtagList, HashtagItem, ValueProposition, CTAButton, CTADiv } from './Home.style';
+import forms from '../../data/forms';
 
 export default class Home extends Component {
 	render() {
@@ -24,10 +25,10 @@ export default class Home extends Component {
 				<Row>
 					<CTADiv>
 						<Col xs={12} sm={4} smOffset={2}>
-							<Link to='/contact'><CTAButton primary>J'AI BESOIN D'UN SITE WEB</CTAButton></Link>
+							<a href={forms.contactSiteWeb} target="_blank" rel="noopener noreferrer"><CTAButton primary>J'AI BESOIN D'UN SITE WEB</CTAButton></a>
 						</Col>
 						<Col xs={12} sm={4} smOffset={0}>
-							<Link to='/contact'><CTAButton>JE RECHERCHE UN DÉVELOPPEUR WEB</CTAButton></Link>
+							<a href={forms.contactDevWeb} target="_blank" rel="noopener noreferrer"><CTAButton>JE RECHERCHE UN DÉVELOPPEUR WEB</CTAButton></a>
 						</Col>
 					</CTADiv>
 				</Row>

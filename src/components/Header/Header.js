@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { StyledNav, activeStyle, BurgerMenu, UL, LI, StyledNavLink } from './Header.style';
+
+import { StyledNav, activeStyle, BurgerMenu, UL, LI, StyledNavLink, Link } from './Header.style';
+import forms from '../../data/forms';
 
 export default class Header extends Component {
 	constructor(props) {
@@ -63,7 +65,7 @@ export default class Header extends Component {
 				        	<StyledNavLink activeStyle={activeStyle} to='/portfolio'>PORTFOLIO</StyledNavLink>
 				        </LI>
 				        <LI>
-				        	<StyledNavLink id='contact' activeStyle={activeStyle} to='/contact'>CONTACT</StyledNavLink>
+				        	<Link href={forms.contactSiteWeb} target="_blank" activeStyle={activeStyle}>CONTACT</Link>
 				        </LI>
 				      </UL>
 				    </div>

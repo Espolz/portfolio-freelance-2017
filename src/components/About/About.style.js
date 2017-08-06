@@ -6,15 +6,17 @@ const titleToContentGap = '5rem';
 
 export const Presentation = styled.p`
 	text-align: justify;
-	line-height: 4.5rem;
-	font-size: 3rem;
-	width: 80%;
+	line-height: 4rem;
+	font-size: 2.8rem;
+	width: 70%;
 	margin: ${titleToContentGap} auto 0;
 	font-family: Helvetica, Arial, sans-serif;
 	
 	${media.phone`
 		font-size: 2rem;
 		line-height: 3rem;
+		text-align: left;
+		width: 80%;
 	`}
 
 	a, a:hover, a:active, a:focus {
