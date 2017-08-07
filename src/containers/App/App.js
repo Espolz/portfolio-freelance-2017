@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ReallySmoothScroll from 'really-smooth-scroll';
+//import ReallySmoothScroll from 'really-smooth-scroll';
 
 import { StyledGrid } from './App.style';
 import Header from '../../components/Header/Header';
@@ -13,7 +13,7 @@ import ScrollTop from '../../components/ScrollTop/ScrollTop';
 
 
 //smooth scroll
-ReallySmoothScroll.shim();
+//ReallySmoothScroll.shim();
 
 
 class App extends Component {

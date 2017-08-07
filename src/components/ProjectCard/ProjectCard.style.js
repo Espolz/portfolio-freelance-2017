@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import colors from '../../theme/colors';
 
-const imgSize = '350px';
+const imgWidth= '350px';
+const imgHeight = '200px';
+
 
 export const Link = styled.a`
 	&, &:hover, &:active, &:focus {
@@ -16,7 +18,7 @@ export const FlexContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	max-width: ${imgSize};
+	max-width: ${imgWidth};
 	transition: all 300ms ease-in-out;
 	margin: 20px auto;
 	cursor: pointer;
@@ -36,10 +38,9 @@ export const FlexContainer = styled.div`
 `;
 	
 export const FakeImg = styled.div`
-	height: 0;
+	max-height: ${imgHeight};
 	width: 100%;
 	display: block;
-	padding: 30% 0;
 	background-image: url(${props => props.src});
 	background-position: center;
 	background-size: cover;
@@ -48,11 +49,24 @@ export const FakeImg = styled.div`
 	z-index: 1;
 `;
 
+export const ImgContainer = styled.div`
+	height: ${imgHeight};
+	width: 100%;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	z-index: 1;
+`;
+
 export const Img = styled.img`
-	opacity: 0;
-	filter: alpha(opacity=0);
-	width: 0;
-	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: ${imgWidth};
+	height: auto;
 `;
 
 export const Overlay = styled.p`

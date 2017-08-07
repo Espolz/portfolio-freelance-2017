@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FlexContainer, Name, Brief, Techno, Img, FakeImg, Overlay, Link, Description } from './ProjectCard.style';
+import { FlexContainer, Name, Brief, Techno, Img, ImgContainer, Overlay, Link, Description } from './ProjectCard.style';
 
 
 const ProjectCard = ({name, brief, techno, link, imgSrc}) => (
 	<Link href={link} title={name} target='_blank'>
 		<FlexContainer>
-			<FakeImg src={imgSrc}>
+			<ImgContainer>
 				<Img src={imgSrc} alt={name}/>
 				<Overlay id="overlay"><i className="fa fa-external-link" aria-hidden="true"></i></Overlay>
-			</FakeImg>
+			</ImgContainer>
 			<Description>
 				<Name>{name}</Name>
 				<Brief>{brief}</Brief>

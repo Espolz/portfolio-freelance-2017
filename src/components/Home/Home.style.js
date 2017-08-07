@@ -18,11 +18,11 @@ export const Name = styled.h1`
 	margin: 0 auto;
 	max-width: 70rem;
 	font-weight: bold;
-	font-size: 12rem;
+	font-size: 10.5rem;
 	padding: 3rem 0;
 
 	span {
-		font-size: 15rem;
+		font-size: 13.5rem;
 	}
 	
 	${media.phone`
