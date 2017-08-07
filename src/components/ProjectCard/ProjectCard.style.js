@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../theme/colors';
 
-const imgSize = '300px';
+const imgSize = '350px';
 
 export const Link = styled.a`
 	&, &:hover, &:active, &:focus {
@@ -22,11 +22,11 @@ export const FlexContainer = styled.div`
 	cursor: pointer;
 	overflow: hidden;
 	background-color: ${colors.lightergrey};
-	border-bottom: 5px solid ${colors.yellow};
+	border-bottom: 6px solid ${colors.yellow};
 
 
 	&:hover {
-		box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+		box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
 		opacity: 0.8;
 
 		#overlay {
@@ -69,7 +69,7 @@ export const Overlay = styled.p`
 
 
 export const Description = styled.div`
-	height: 20.75rem;
+	height: 19rem;
 	padding: 0 5px;
 `;
 

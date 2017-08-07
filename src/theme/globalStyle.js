@@ -26,12 +26,11 @@ export const Title = styled.h3`
 	padding-left: 3rem;
 	font-weight: bold;
 	font-size: 8rem;
-	background-color: ${colors.purple};
-	color: ${colors.yellow};
+	background-color: ${colors.white};
+	color: ${colors.purple};
 	line-height: 20rem;
 	margin-top: 0;
-	border-bottom: 4px solid ${colors.yellow};
-	box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.2);
 
 
 	${media.phone`
